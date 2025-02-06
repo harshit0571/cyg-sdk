@@ -1,16 +1,24 @@
 {
   "name": "paymnt-sdk",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cyg.cjs.js",
+  "module": "dist/cyg.esm.js",
+  "browser": "dist/cyg.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "rollup": "^4.34.4"
-  }
+  },
+  "type": "module"
 }

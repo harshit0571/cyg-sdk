@@ -1,14 +1,15 @@
-import pkg from '../package.json'
+import pkg from "../package.json";
+
 class Cyg {
   static VERSION = pkg.version;
   constructor() {
-    this.name = "Razorpay";
+    this.name = "cyg";
   }
 
   sayHello() {
-    console.log("Hello from Razorpay!");
-    return "Hello from Razorpay!";
+    console.log("Hello from cyg!");
+    return "Hello from cyg!";
   }
 }
 
-module.exports = Cyg;
+export default Cyg;
