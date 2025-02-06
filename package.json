@@ -1,6 +1,7 @@
 {
-  "name": "paymnt-sdk",
+  "name": "cyg-js",
   "version": "1.0.0",
+  "description": "Cyg Payment SDK",
   "main": "dist/cyg.cjs.js",
   "module": "dist/cyg.esm.js",
   "browser": "dist/cyg.umd.js",
@@ -8,12 +9,22 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "payment",
+    "sdk"
+  ],
+  "author": "Harshit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshit0571/cyg-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/harshit0571/cyg-sdk"
+  },
+  "homepage": "https://github.com/harshit0571/cyg-sdk#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-json": "^6.1.0",
