@@ -2,14 +2,16 @@
   "name": "cyg-js",
   "version": "1.0.0",
   "description": "Cyg Payment SDK",
-  "main": "dist/cyg.cjs.js",
+  "main": "dist/cyg.umd.js",
   "module": "dist/cyg.esm.js",
   "browser": "dist/cyg.umd.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rimraf dist && webpack --config webpack.config.js",
+    "prepare": "npm run build"
   },
   "keywords": [
     "payment",
@@ -25,11 +27,28 @@
     "url": "https://github.com/harshit0571/cyg-sdk"
   },
   "homepage": "https://github.com/harshit0571/cyg-sdk#readme",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.2",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^16.0.0",
-    "rollup": "^4.34.4"
+  "dependencies": {
+    "react": "^18.2.0"
   },
-  "type": "module"
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/react": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/cyg.esm.js",
+      "require": "./dist/cyg.cjs.js",
+      "default": "./dist/cyg.umd.js"
+    }
+  }
 }

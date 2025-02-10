@@ -1,5 +1,8 @@
-// Initialize Cyg with key
-const cyg = new Cyg({
+// Debug check for Cyg availability
+console.log("Cyg availability:", window.Cyg);
+
+// Initialize Cyg with key - now we can use it directly
+const cyg = new window.Cyg({
   key_id: "test_key_id",
   key_secret: "test_key_secret",
 });
